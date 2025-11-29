@@ -1,0 +1,13 @@
+module Main where
+
+-- Fonction qui crée un message personnalisé
+greet :: String -> Int -> String
+greet name age = "Salut " ++ name ++ "! Tu as " ++ show age ++ " ans. Continue à coder en Haskell 🚀"
+
+main :: IO ()
+main = do
+    putStrLn "Quel est ton prénom ?"
+    name <- getLine                -- Lire le nom
+    putStrLn "Quel âge as-tu ?"
+    let age = 26                   -- Ton âge fixe
+    putStrLn (greet name age)      -- Afficher le message
